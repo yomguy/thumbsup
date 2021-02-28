@@ -12,5 +12,6 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '12'
+      - run: choco install exiftool graphicsmagick
       - run: npm install
       - run: npm test

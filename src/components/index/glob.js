@@ -22,7 +22,7 @@ exports.find = function (rootFolder, options, callback) {
   })
   const stream = readdir.stream(rootFolder, {
     filter: file => pattern.match(file.path),
-    deep: dir => pattern.canTraverse(dir.path),
+    deep: true,
     stats: true,
     basePath: '',
     sep: '/'
